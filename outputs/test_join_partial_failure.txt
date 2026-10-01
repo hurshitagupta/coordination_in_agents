@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Hurshita Gupta\OneDrive\Desktop\coordination_in_agents\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Hurshita Gupta\OneDrive\Desktop\coordination_in_agents
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 7 items
+
+tests/test_join_partial_failure.py::test_all_success_results_are_joined PASSED [ 14%]
+tests/test_join_partial_failure.py::test_partial_failure_is_reported PASSED [ 28%]
+tests/test_join_partial_failure.py::test_all_failed_returns_failure_without_llm PASSED [ 42%]
+tests/test_join_partial_failure.py::test_cancelled_task_creates_partial_success PASSED [ 57%]
+tests/test_join_partial_failure.py::test_invalid_status_is_rejected PASSED [ 71%]
+tests/test_join_partial_failure.py::test_success_without_output_is_rejected PASSED [ 85%]
+tests/test_join_partial_failure.py::test_transient_llm_failure_is_retried PASSED [100%]
+
+============================== 7 passed in 0.82s ==============================

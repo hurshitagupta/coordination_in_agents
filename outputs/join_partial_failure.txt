@@ -1,0 +1,52 @@
+=== HAPPY PATH ===
+{
+  "status": "success",
+  "combined_response": "The article explains how AI agents coordinate multiple tasks, and its overall sentiment is positive.",
+  "successful_tasks": [
+    "summary",
+    "sentiment"
+  ],
+  "incomplete_tasks": [],
+  "duration_ms": 2995.271
+}
+
+Trace:
+result_count=2
+max_results=20
+max_retries=1
+successful_count=2
+unsuccessful_count=0
+llm_attempt=1
+llm_status=success
+final_status=success duration_ms=2995.271
+
+=== PARTIAL FAILURE PATH ===
+{
+  "status": "partial_success",
+  "combined_response": "The article explains coordination between AI agents, and its sentiment is positive.",
+  "successful_tasks": [
+    "summary",
+    "sentiment"
+  ],
+  "incomplete_tasks": [
+    {
+      "task_id": "risk_analysis",
+      "status": "failure"
+    },
+    {
+      "task_id": "validation",
+      "status": "blocked"
+    }
+  ],
+  "duration_ms": 2818.046
+}
+
+Trace:
+result_count=4
+max_results=20
+max_retries=1
+successful_count=2
+unsuccessful_count=2
+llm_attempt=1
+llm_status=success
+final_status=partial_success duration_ms=2818.046
