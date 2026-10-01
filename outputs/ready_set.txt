@@ -1,0 +1,35 @@
+=== HAPPY PATH ===
+Ready tasks: ['prepare_summary', 'prepare_risk_report']
+
+Trace:
+task_count=4
+successful_dependencies=['collect_requirements']
+max_steps=100
+timeout_seconds=2.0
+retry_policy=disabled_non_transient_state_check
+task=collect_requirements decision=skip reason=status_success
+task=prepare_summary decision=ready
+task=prepare_risk_report decision=ready
+task=final_review decision=not_ready waiting_for=['prepare_risk_report', 'prepare_summary']
+ready_count=2
+ready_tasks=['prepare_summary', 'prepare_risk_report']
+steps_used=4
+duration_ms=0.040
+ready_set_status=completed
+
+=== FAILURE / BLOCKED PATH ===
+Ready tasks: []
+
+Trace:
+task_count=2
+successful_dependencies=[]
+max_steps=100
+timeout_seconds=2.0
+retry_policy=disabled_non_transient_state_check
+task=collect_requirements decision=skip reason=status_failure
+task=prepare_summary decision=not_ready waiting_for=['collect_requirements']
+ready_count=0
+ready_tasks=[]
+steps_used=2
+duration_ms=0.010
+ready_set_status=completed
