@@ -1,0 +1,20 @@
+=== HAPPY PATH ===
+Dependency graph:
+collect_requirements: []
+prepare_solution: ['collect_requirements']
+review_solution: ['prepare_solution']
+send_response: ['review_solution']
+
+Trace:
+task_count=4
+max_steps=100
+timeout_seconds=2.0
+retry_policy=disabled_non_transient_validation
+dependency_references=valid
+cycle_check=passed
+steps_used=7
+duration_ms=0.419
+graph_status=valid
+
+=== FAILURE PATH ===
+Rejected: Task 'prepare_solution' has unknown dependencies: ['missing_task']

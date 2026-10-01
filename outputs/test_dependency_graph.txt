@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Hurshita Gupta\OneDrive\Desktop\coordination_in_agents\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Hurshita Gupta\OneDrive\Desktop\coordination_in_agents
+configfile: pyproject.toml
+plugins: anyio-4.15.1
+collecting ... collected 7 items
+
+tests/test_dependency_graph.py::test_valid_dependency_graph PASSED       [ 14%]
+tests/test_dependency_graph.py::test_unknown_dependency_is_rejected PASSED [ 28%]
+tests/test_dependency_graph.py::test_cycle_is_rejected PASSED            [ 42%]
+tests/test_dependency_graph.py::test_duplicate_task_id_is_rejected PASSED [ 57%]
+tests/test_dependency_graph.py::test_self_dependency_is_rejected PASSED  [ 71%]
+tests/test_dependency_graph.py::test_step_limit_is_enforced PASSED       [ 85%]
+tests/test_dependency_graph.py::test_invalid_timeout_is_rejected PASSED  [100%]
+
+============================== 7 passed in 0.04s ==============================
