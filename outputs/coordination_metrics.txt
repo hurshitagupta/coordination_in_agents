@@ -1,0 +1,59 @@
+=== HAPPY PATH ===
+Metrics:
+total_tasks: 3
+success_count: 3
+failure_count: 0
+blocked_count: 0
+cancelled_count: 0
+completed_tasks: 3
+incomplete_tasks: 0
+completion_rate: 100.0
+failure_rate: 0.0
+final_status: success
+duration_ms: 0.012
+
+Trace:
+task_count=3
+max_tasks=100
+retry_policy=not_applicable_metrics_are_local
+task=summary status=success
+task=sentiment status=success
+task=validation status=success
+success_count=3
+failure_count=0
+blocked_count=0
+cancelled_count=0
+completion_rate=100.00
+final_status=success
+duration_ms=0.012
+
+=== PARTIAL COMPLETION ===
+Metrics:
+total_tasks: 5
+success_count: 2
+failure_count: 1
+blocked_count: 1
+cancelled_count: 1
+completed_tasks: 2
+incomplete_tasks: 3
+completion_rate: 40.0
+failure_rate: 20.0
+final_status: partial_success
+duration_ms: 0.008
+
+Trace:
+task_count=5
+max_tasks=100
+retry_policy=not_applicable_metrics_are_local
+task=summary status=success
+task=sentiment status=success
+task=risk_analysis status=failure
+task=validation status=blocked
+task=report status=cancelled
+success_count=2
+failure_count=1
+blocked_count=1
+cancelled_count=1
+completion_rate=40.00
+final_status=partial_success
+duration_ms=0.008
